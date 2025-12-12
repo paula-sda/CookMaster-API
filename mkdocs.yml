@@ -1,0 +1,29 @@
+site_name: CookMaster API
+site_description: Documentación completa de la API de CookMaster
+site_author: Paula Saenz
+site_url: https://github.com/paula-sda/CookMaster-API
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+nav:
+  - Documentación: CookMasterAPI.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - tables
+
+extra_css:
+  - css/custom.css
+
+extra_javascript:
+  - js/custom.js

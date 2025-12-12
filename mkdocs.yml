@@ -13,7 +13,7 @@ theme:
     code: Roboto Mono
 
 nav:
-  - Documentación: CookMasterAPI.md
+  - Documentación: index.md
 
 markdown_extensions:
   - admonition
@@ -21,9 +21,3 @@ markdown_extensions:
   - toc:
       permalink: true
   - tables
-
-extra_css:
-  - css/custom.css
-
-extra_javascript:
-  - js/custom.js

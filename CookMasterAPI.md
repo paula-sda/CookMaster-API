@@ -50,7 +50,7 @@ La API Key se envía en la cabecera `X-API-Key` para autenticar la solicitud.
 ```bash
 curl -X GET "https://api.cookmaster.com/v1/recetas" \
 -H "X-API-Key: 12345ABC"
-
+```
 
 
 ## 4. EndPoints
@@ -66,13 +66,13 @@ curl -X GET "https://api.cookmaster.com/v1/recetas" \
 - Sin parámetros
 
 #### Implementacion
-
+```
 from cookmaster import CookMaster
 
 api = CookMaster()
 todas = api.get_recetas_todas()
 print(todas)
-
+```
 #### Respuesta
 
 ```json
@@ -140,7 +140,7 @@ print(todas)
     "valoracionMedia": 4.4
   }
 ]
-
+```
 #### Errores
 
 | Código | Descripción       |
@@ -164,13 +164,13 @@ print(todas)
   - `id` (int, obligatorio)
 
 #### Implementacion
-
+```
 from cookmaster import CookMaster
 
 api = CookMaster()
 receta = api.get_receta(1)
 print(receta)
-
+```
 #### Respuesta
 
 ```json
@@ -195,7 +195,7 @@ print(receta)
   "valoracionMedia": 4.7
 }
 
-
+```
 
 #### Errores
 
@@ -204,10 +204,10 @@ print(receta)
 | 400    | ID inválido          |
 | 404    | Receta no encontrada |
 
-
+```
 print(api.get_receta(78))  // 404
 print(api.get_receta("abc"))  // 400
-
+```
 
 #### Limitaciones
 
@@ -227,20 +227,20 @@ print(api.get_receta("abc"))  // 400
   - `id` (int, obligatorio)
 
 #### Implementacion
-
+```
 from cookmaster import CookMaster
 
 api = CookMaster()
 receta_eliminada = api.eliminar_receta(6)
 print(receta_eliminada)
-
+```
 #### Respuesta
 
-```json
+```
 {
   "mensaje": "Receta eliminada correctamente"
 }
-
+```
 
 #### Errores
 
@@ -249,10 +249,10 @@ print(receta_eliminada)
 | 400    | ID inválido          |
 | 404    | Receta no encontrada |
 
-
+```
 print(api.eliminar_receta(200))  // 404
 print(api.eliminar_receta("abc"))  // 400
-
+```
 
 #### Limitaciones
 
@@ -278,7 +278,7 @@ print(api.eliminar_receta("abc"))  // 400
 
 
 #### Implementacion
-
+```
 nueva = {
   "nombre": "Pasta al pesto",
   "categoria": "pastas",
@@ -302,15 +302,15 @@ nueva = {
 
 
 print(api.crear_receta(nueva))
-
+```
 
 #### Respuesta
-
+```
 {
   "id": 51,
   "mensaje": "Receta creada correctamente"
 }
-
+```
 #### Errores
 
 | Código | Descripción                |
@@ -318,10 +318,10 @@ print(api.crear_receta(nueva))
 | 400    | Falta un campo obligatorio |
 | 409    | Receta duplicada           |
 
-
+```
 print(api.crear_receta({"categoria": "pastas"}))  # 400
 print(api.crear_receta(duplicada))  # 409
-
+```
 
 #### Limitaciones
 
@@ -370,7 +370,7 @@ print(api.crear_receta(duplicada))  # 409
   ],
   "valoracionMedia": 4.7
 }
-
+```
 
 
 ## 6. Errores comunes

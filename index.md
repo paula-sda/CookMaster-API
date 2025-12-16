@@ -403,7 +403,7 @@ print(api.crear_receta(duplicada))  # 409
 ## 8. SDKs Disponibles
 
 - **SDK Python:** [cookmaster.py](./sdk/cookmaster.py)
-- **SDK Java:** [CookMasterSDK.java](./sdk/CookMasterSDK.java)
+- **SDK Java:** [Descargar Java](https://raw.githubusercontent.com/paula-sda/CookMaster-API/main/sdk/CookMasterSDK.java)
  
 
 
